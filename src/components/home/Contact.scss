@@ -1,0 +1,63 @@
+.contact-cont {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+  box-sizing: border-box;
+
+  .contact-top {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: initial;
+
+    h1 {
+      color: #ae445a;
+      font-size: 80px;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+
+    p {
+      color: #395886;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    div {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  .contact-bottom {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    align-self: flex-end;
+
+    p {
+      color: #ae445a;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    a {
+      color: #395886;
+      font-size: 30px;
+      font-weight: 700;
+      transition: all .7s;
+    }
+
+    a:hover {
+        color: white;
+    }
+  }
+}

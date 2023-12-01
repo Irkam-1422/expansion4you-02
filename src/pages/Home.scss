@@ -1,0 +1,40 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+a {
+    transition: all .7s;
+}
+
+a:hover {
+    color: white;
+}
+
+.bgEl {
+  transition: all 1s;
+  position: relative;
+//   margin-top: 100px;
+
+  a {
+    color: #ae445a;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  p,
+  span {
+    font-weight: 700;
+    font-size: 26px; 
+  }
+
+  li {
+    font-size: 30px;
+  }
+
+  h1,
+  h2 {
+    margin-bottom: 0;
+    font-size: 60px;
+    color: #ae445a;
+  }
+}
