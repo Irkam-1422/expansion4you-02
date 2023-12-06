@@ -173,29 +173,33 @@
       text-align: initial;
 
       a {
-        color: #26d2ff;
+        color: #a975fe;
       }
     }
   }
 
   .content {
-    background: linear-gradient(240deg, rgba(38, 210, 255, 0.15) 31.77%, rgba(38, 210, 255, 0.40) 85.09%);
+    background: linear-gradient(
+      240deg,
+      rgba(169, 117, 254, 0.15) 31.77%,
+      rgba(169, 117, 254, 0.5) 85.09%
+    );
     display: flex;
     padding: 61px 56px;
     flex-direction: column;
     gap: 32px;
     text-align: end;
-    align-items: flex-end; 
+    align-items: flex-end;
 
     div {
-      color: var(--almost-black, #1A1616);
-    text-align: right;
-    font-family: Quicksand;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    width: 30%; 
+      color: var(--almost-black, #1a1616);
+      text-align: right;
+      font-family: Quicksand;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      width: 30%;
     }
 
     .last {
