@@ -19,12 +19,17 @@
     justify-content: space-between;
 
     .cross {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 20px;
       width: 54.091px;
       height: 62.842px;
       margin-top: -20px;
       cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .cross:hover {
+      transform: scale(0.9);
     }
 
     .logo {

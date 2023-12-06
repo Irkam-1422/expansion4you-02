@@ -36,5 +36,11 @@
   .menu {
     width: 77.017px;
     height: 47px;
+    cursor: pointer;
+    transition: all .3s;
+  }
+
+  .menu:hover {
+    transform: scale(0.9);
   }
 }

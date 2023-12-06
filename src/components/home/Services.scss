@@ -111,11 +111,12 @@
 
     li {
       transition: all 0.5s;
+      cursor: pointer;
     }
 
     li:hover {
       transform: translateX(23px);
-      color: #56d2f9;
+      color: #a975fe;
     }
   }
 

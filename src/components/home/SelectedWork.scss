@@ -139,6 +139,7 @@
 
   .sw-bottom {
     display: flex;
+    justify-content: center;
     gap: 30px;
 
     .inner {
@@ -146,10 +147,33 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
+      cursor: pointer;
+
+      div {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          transition: all 1s;
+          transform: scale(1.1);
+        }
+      }
 
       h3 {
         text-align: end;
         font-size: 25px;
+      }
+    }
+
+    .inner:hover {
+      img {
+        transform: scale(1);
+      }
+
+      h3 {
+        color: #a975fe;
       }
     }
   }
