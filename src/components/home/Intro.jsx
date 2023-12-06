@@ -1,50 +1,50 @@
 import React, { useEffect, useRef } from "react";
-import { observer } from "../../observers.js";
+import { observer_op } from "../../observers.js";
 
 import "./Intro.scss";
 
 export const Intro = () => {
-  const introCont = useRef(null);
+  const mission = useRef(null)
+  const blue = useRef(null)
 
-  useEffect(() => {
-    const bgEl = document.getElementById("bgEl");
-    if (introCont.current) {
-      observer("#F0F3FA", bgEl).observe(introCont.current);
+  const introCont = useRef(null);
+    useEffect(() => {
+    if (mission.current) {
+      mission.current.style.transition = 'all .7s'
+      observer_op().observe(mission.current)
     }
-  }, []);
+    if (blue.current) {
+      blue.current.style.transition = 'all .7s'
+      observer_op().observe(blue.current)
+    }
+  },[])
 
   return (
     <div className="intro-cont" ref={introCont}>
-      <div className="into-top">
-        <h1>Let Expansion 4 YOU Make It Happen!</h1>
-        <p>
-          We believe that every Brand has its unique story, and we are here to
-          help you tell yours. With our innovative digital marketing strategies,
-          we transform ideas into impactful narratives, driving your brand’s
-          success.
-        </p>
-      </div>
-      <div className="into-bottom">
-        <div className="ib-1">
-          <a href="">See more About who we are.</a>
-          <h2>Our <br /> Mission</h2>
-          <p>
-            is to unite two elements that may not naturally align: creativity
+      <div className="mission" ref={mission}>
+        <h1>Our Mission</h1>
+        <div className="vertical"></div>
+        <div className="text">
+          <p className="">
+            is to unite two elements that may not naturally align: <br /> creativity
             and tangible results.
           </p>
-        </div>
-        <div className="ib-2">
-          <p>
-            At Expansion 4YOU our commitment to expansion centers on creating
-            meaningful{" "}
-          </p>
-          <span>CONNECTIONS.</span>
-          <p>
-            We link products and services with people, connecting your brand to
-            both new and existing audiences.{" "}
-          </p>
+          <a href="">See more about who we are</a>
         </div>
       </div>
+      <hr />
+      <div className="content" ref={blue}>
+        <div className="">
+          At Expansion 4YOU our commitment to expansion centers on creating
+          meaningful
+        </div>
+        <div className="">CONNECTIONS.</div>
+        <div className="last">
+          We link products and services with people, connecting your brand to
+          both new and existing audiences.
+        </div>
+      </div>
+      <hr />
     </div>
   );
 };

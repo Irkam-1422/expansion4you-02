@@ -1,16 +1,15 @@
 .menu-cont {
   width: 100vw;
   height: 100vh;
-  background: #f0f3fa;
+  background: #fff;
   display: flex;
   z-index: 999999;
   position: fixed;
+  top: 0;
+  left: 0;
   flex-direction: column;
   justify-content: space-between;
-  padding: 50px 100px;
-//   padding-left: 15px;
-//   padding-top: 15px;
-  padding-bottom: 150px;
+  padding: 50px;
   box-sizing: border-box;
   display: none;
 
@@ -22,8 +21,14 @@
     .cross {
       width: 30px;
       height: 30px;
+      width: 54.091px;
+      height: 62.842px;
       margin-top: -20px;
       cursor: pointer;
+    }
+
+    .logo {
+      width: 200px;
     }
   }
 
@@ -31,34 +36,39 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    font-size: 40px;
     gap: 30px;
     list-style: none;
     font-weight: 700;
     margin-bottom: 0;
+    color: var(--almost-black, #1a1616);
+    text-align: right;
+    font-family: Philosopher;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; /* 171.429% */
+    letter-spacing: 0.7px;
 
     li {
       display: flex;
       align-items: center;
-      gap: 30px;
       cursor: pointer;
       transition: all 0.5s;
+      transform: translateX(100%);
+      opacity: 0;
 
-      .circle {
-        width: 10px;
-        height: 10px;
-        background: black;
-        border-radius: 50%;
-        transition: all 1s;
+      div {
+        font-family: Philosopher;
       }
     }
 
     li:hover {
-      color: #ae445a;
+      color: #26d2ff;
+    }
 
-      .circle {
-        background: #ae445a;
-      }
+    .show {
+      transform: none;
+      opacity: 1;
     }
   }
 }

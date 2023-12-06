@@ -1,77 +1,155 @@
-.swork-cont {
-  display: flex;
-  width: 100vw;
-  height: 200vh;
-  justify-content: center;
-  flex-direction: column;
-  gap: 30px;
-  padding: 5%;
-  box-sizing: border-box;
-  align-items: center;
+// .swork-cont {
+//   display: flex;
+//   width: 100vw;
+//   height: 200vh;
+//   justify-content: center;
+//   flex-direction: column;
+//   gap: 30px;
+//   padding: 5%;
+//   box-sizing: border-box;
+//   align-items: center;
+//   position: relative;
 
+//   .rombus-cont {
+//     z-index: -1;
+
+//     .rombus {
+//       width: 1079.567px;
+//       height: 3001.747px;
+//       transform: rotate(38.08deg);
+//       background: linear-gradient(180deg, rgba(255, 214, 0, 0.40) 0%, rgba(255, 77, 0, 0.40) 100%);
+//       position: absolute;
+//       top: -69vh;
+//       left: -3vw;
+//     }
+//   }
+
+//   .sw-top {
+//     display: flex;
+//     align-items: flex-end;
+//     gap: 30px;
+//     // width: 1350px;
+
+//     p {
+//       font-size: 30px;
+//       text-align: initial;
+//       color: #395886;
+//       font-size: 30px;
+//       font-style: normal;
+//       font-weight: 600;
+//     }
+
+//     h1 {
+//       color: #ae445a;
+//       text-align: right;
+//       font-size: 60px;
+//       font-weight: 700;
+//       line-height: normal;
+//       margin: 0;
+//       align-self: flex-start;
+//       margin-top: -70px;
+//     }
+//   }
+
+//   .sw-bottom {
+//     display: flex;
+//     justify-content: center;
+//     gap: 50px;
+
+//     h3 {
+//       color: #395886;
+//       text-align: end;
+//       font-size: 30px;
+//       font-weight: 700;
+//       margin: 0;
+//       margin-top: 15px;
+//       cursor: pointer;
+//       transition: all 1s;
+//     }
+
+//     h3:hover {
+//       color: #ae445a;
+//     }
+
+//     div {
+//       div {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         overflow: hidden;
+//         width: 415px;
+//         height: 497px;
+
+//         img {
+//           transition: all 1s;
+//         }
+
+//         img:hover {
+//           transform: scale(1.07);
+//         }
+//       }
+//     }
+//   }
+// }
+
+.swork-cont {
   .sw-top {
     display: flex;
-    align-items: flex-end;
-    gap: 30px;
-    // width: 1350px;
-
-    p {
-      font-size: 30px;
-      text-align: initial;
-      color: #395886;
-      font-size: 30px;
-      font-style: normal;
-      font-weight: 600;
-    }
+    gap: 40px;
+    align-items: center;
+    padding: 0 20px;
 
     h1 {
-      color: #ae445a;
-      text-align: right;
-      font-size: 60px;
+      color: var(--almost-black, #1a1616);
+      font-family: Philosopher;
+      font-size: 70px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.8px;
+      text-align: initial;
+      width: min-content;
+    }
+
+    .vertical {
+      width: 2px;
+      background: #000;
+      height: 200px;
+    }
+
+    p {
+      color: var(--almost-black, #1a1616);
+      font-family: Quicksand;
+      font-size: 21px;
+      font-style: normal;
       font-weight: 700;
       line-height: normal;
-      margin: 0;
-      align-self: flex-start;
-      margin-top: -70px;
+      text-align: initial;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
+  }
+
+  hr {
+    color: #000;
+    background: #000;
+    border: 1px solid #000;
   }
 
   .sw-bottom {
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    gap: 30px;
 
-    h3 {
-      color: #395886;
-      text-align: end;
-      font-size: 30px;
-      font-weight: 700;
-      margin: 0;
-      margin-top: 15px;
-      cursor: pointer;
-      transition: all 1s;
-    }
+    .inner {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
 
-    h3:hover {
-      color: #ae445a;
-    }
-
-    div {
-      div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        width: 415px;
-        height: 497px;
-
-        img {
-          transition: all 1s;
-        }
-
-        img:hover {
-          transform: scale(1.07);
-        }
+      h3 {
+        text-align: end;
+        font-size: 25px;
       }
     }
   }

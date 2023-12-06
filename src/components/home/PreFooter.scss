@@ -1,41 +1,81 @@
+// .prefoot-cont {
+//   width: 100vw;
+//   height: 150vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   .prefoot-inner {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//     width: 700px;
+//     text-align: end;
+//     margin-left: -350px;
+
+//     h1 {
+//       margin: 0;
+//       font-size: 90px;
+//       color: #e76883;
+//       margin-right: -290px;
+//       margin-bottom: -90px;
+//     }
+
+//     p {
+//       color: #f0f3fa;
+//       text-align: end;
+//       font-size: 30px;
+//       font-weight: 700;
+//     }
+
+//     a {
+//       font-size: 30px;
+//       font-weight: 700;
+//       color: #e76883;
+//       transition: all .7s;
+//     }
+//     a:hover {
+//         color: white;
+//     }
+//   }
+// }
+
 .prefoot-cont {
-  width: 100vw;
-  height: 150vh;
+  background: linear-gradient(
+    240deg,
+    rgba(38, 210, 255, 0.15) 31.56%,
+    rgba(38, 210, 255, 0.4) 84.15%
+  );
+  padding: 38px 51px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 138px;
 
-  .prefoot-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 700px;
+  h1 {
+    color: var(--almost-black, #1A1616);
+    font-family: Philosopher;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    margin: 0;
+    text-align: initial; 
+  }
+
+  .content {
+    color: var(--almost-black, #1a1616);
+    font-family: Quicksand;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
     text-align: end;
-    margin-left: -350px;
-
-    h1 {
-      margin: 0;
-      font-size: 90px;
-      color: #e76883;
-      margin-right: -290px;
-      margin-bottom: -90px;
-    }
-
-    p {
-      color: #f0f3fa;
-      text-align: end;
-      font-size: 30px;
-      font-weight: 700;
-    }
+    width: 610px;
+    align-self: end;
 
     a {
-      font-size: 30px;
-      font-weight: 700;
-      color: #e76883;
-      transition: all .7s;
-    }
-    a:hover {
-        color: white;
+      color: #26d2ff;
     }
   }
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import video from "../../assets/home/video.mp4";
-import { observer } from "../../observers.js";
+import { observer, observer_op } from "../../observers.js";
 import "./Video.scss";
 
 const words = [
@@ -22,35 +22,26 @@ const colors = [
 ];
 
 export const Video = () => {
-  const [again, setAgain] = useState(false);
+  const p = useRef(null)
   const [word, setWord] = useState(words[0]);
   const [color, setColor] = useState(colors[0]);
   const videoCont = useRef(null);
 
   useEffect(() => {
-    const bgEl = document.getElementById("bgEl");
-    if (videoCont.current) {
-      console.log(videoCont.current, bgEl);
-      observer("#F0F3FA", bgEl).observe(videoCont.current);
+    if (p.current) {
+      p.current.style.transition = 'all .7s'
+      observer_op().observe(p.current)
     }
-  }, []);
-
-  useEffect(() => {
-    words.forEach((el, i) =>
-      setTimeout(() => {
-        setWord(el);
-        setColor(colors[i]);
-        if (i === words.length - 1) setAgain((prev) => !prev);
-      }, 1000 * (i + 1))
-    );
-  }, [again]);
+  },[])
 
   return (
     <div className="video-outer" ref={videoCont}>
+      <h1>Let Expansion 4 YOU <br /> Make It Happen!</h1>
+      <hr />
       <div className="video-inner">
         <video
           src={video}
-          autoPlay={true}
+          // autoPlay={true}
           muted={true}
           loop={true}
           type="video/mp4"
@@ -59,6 +50,13 @@ export const Video = () => {
           Expand Your <span style={{ color: color }}>{word}</span>
         </div>
       </div>
+      <p ref={p}>
+        We believe that every Brand has its unique story, and we are here to
+        help you tell yours. With our innovative digital marketing strategies,
+        we transform ideas into impactful narratives, driving your brand’s
+        success.
+      </p>
+      <hr />
     </div>
   );
 };

@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { observer } from "../../observers.js";
+import swork from "../../assets/home/swork.png";
+import { observer_op } from "../../observers.js";
 
 import "./SelectedWork.scss";
 
@@ -11,16 +13,33 @@ const articles = [
 
 export const SelectedWork = () => {
   const sworkCont = useRef(null);
+  const cont = useRef(null);
+  const a1 = useRef(null);
+  const a2 = useRef(null);
+  const a3 = useRef(null);
 
   useEffect(() => {
-    const bgEl = document.getElementById("bgEl");
-    if (sworkCont.current) {
-      observer("#F0F3FA", bgEl).observe(sworkCont.current);
+    console.log(a1.current);
+    if (cont.current) {
+      cont.current.style.transition = "all .7s";
+      observer_op().observe(cont.current);
+    }
+
+    if (a1.current && a2.current && a3.current) {
+      a1.current.style.transition = "all .7s";
+      a2.current.style.transition = "all .7s";
+      a3.current.style.transition = "all .7s";
+      observer_op().observe(a1.current);
+      observer_op().observe(a2.current);
+      observer_op().observe(a3.current);
     }
   }, []);
+
   return (
     <div className="swork-cont" ref={sworkCont}>
-      <div className="sw-top">
+      <div className="sw-top" ref={cont}>
+        <h1>Selected Work</h1>
+        <div className="vertical"></div>
         <p>
           We empower local and global businesses to establish an impactful and
           influential online presence. Through strategic digital solutions, we
@@ -29,13 +48,13 @@ export const SelectedWork = () => {
           effectively. Our mission is to elevate brands, enhance visibility, and
           drive sustainable growth in the ever-evolving online sphere.
         </p>
-        <h1>Selected Work</h1>
       </div>
+      <hr />
       <div className="sw-bottom">
         {articles.map((a, i) => {
           return (
-            <div className="" style={{width: '25%'}}>
-              <div className="" style={{width: '100%'}}>
+            <div className="inner" ref={i === 0 ? a1 : i === 1 ? a2 : a3}>
+              <div className="" style={{ width: "100%" }}>
                 <img src={require(`../../assets/home/${a.img}`)} alt="" />
               </div>
               <h3>{a.title}</h3>
@@ -43,6 +62,7 @@ export const SelectedWork = () => {
           );
         })}
       </div>
+      <hr />
     </div>
   );
 };

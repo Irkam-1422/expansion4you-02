@@ -12,6 +12,27 @@ const observer = (color, bgEl) => {
   }, options);
 };
 
+const observer_op = (time) => {
+  return new IntersectionObserver((entry) => {
+    entry.forEach((change) => {
+      if (change.isIntersecting) {
+        console.log("show");
+        if (time) {
+          setTimeout(() => {
+            change.target.style.opacity = 1;
+          }, time);
+        } else {
+          change.target.style.opacity = 1;
+        }
+      } else {
+        console.log("hide");
+        change.target.style.opacity = 0;
+      }
+    });
+  }, options);
+};
+
 module.exports = {
   observer,
+  observer_op,
 };
