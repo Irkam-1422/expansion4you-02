@@ -13,10 +13,10 @@ const words = [
 ];
 
 const colors = [
-  "#A975FE",
+  "#26D2FF",
   "#FE3BD6",
   "#FFDD2C",
-  "#A975FE",
+  "#26D2FF",
   "#FE3BD6",
   "#FFDD2C",
 ];

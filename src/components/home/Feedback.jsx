@@ -96,11 +96,11 @@ export const Feedback = () => {
         </h1>
         <div className="arrows">
             <img
-              src={require("../../assets/home/purple-arrow-left.png")}
+              src={require("../../assets/home/blue-arrow-left.png")}
               onClick={handlePrevClick}
             />
             <img
-              src={require("../../assets/home/purple-arrow-right.png")}
+              src={require("../../assets/home/blue-arrow-right.png")}
               onClick={handleNextClick}
             />
           </div>
