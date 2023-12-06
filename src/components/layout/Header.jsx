@@ -24,7 +24,7 @@ export const Header = ({ setMenu }) => {
     <>
       <div
         className="header-cont"
-        style={visible ? {} : { transform: "translateY(-100%)" }}
+        style={visible ? {} : { transform: "translateY(-150%)" }}
       >
         <img
           src={require("../../assets/home/logoBlack.png")}
