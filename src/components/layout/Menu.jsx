@@ -7,6 +7,8 @@ const items = ["About", "Services", "Our Work", "What’s New", "Contact Us"];
 export const Menu = ({ menu, setMenu }) => {
   const inputs = useRef([])
 
+  // test
+
   useEffect(() => {
     if (inputs.current) {
       for (let i = 0; i < inputs.current.length; i++) {
