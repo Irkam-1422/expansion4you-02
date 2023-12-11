@@ -63,7 +63,7 @@ export const SelectedWork = () => {
           );
         })}
       </div>
-      <Accordion defaultActiveKey="0" flush>
+      <Accordion defaultActiveKey="0" flush className="d-md-none d-block">
         {articles.map((a, i) => {
           return (
             <Accordion.Item eventKey={i}>

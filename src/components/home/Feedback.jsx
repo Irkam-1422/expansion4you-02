@@ -70,7 +70,7 @@ export const Feedback = () => {
   return (
     <div className="feedback-cont" ref={cont}>
       <div className="content">
-        <div className="arrows-mobile">
+        <div className="arrows-mobile d-md-none d-flex">
           <img
             src={require("../../assets/home/purple-arrow-left.png")}
             onClick={handleNextClick}
