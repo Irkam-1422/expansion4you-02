@@ -1,3 +1,6 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../../styles/media-queries.scss";
+
 .menu-cont {
   width: 100vw;
   height: 100vh;
@@ -78,6 +81,23 @@
     .show {
       transform: none;
       opacity: 1;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .menu-header {
+      .logo {
+        width: 150px;
+      }
+      .cross {
+        width: 30px;
+        height: auto;
+        margin-top: -4px;
+      }
+    }
+
+    ul {
+      font-size: 40px;
     }
   }
 }
