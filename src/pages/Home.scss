@@ -1,3 +1,6 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../styles/media-queries.scss";
+
 * {
     font-family: 'Quicksand', sans-serif;
 }
@@ -27,6 +30,10 @@ a:hover {
 
 #bgEl {
   margin-top: 160px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 80px;
+  }
 }
 
 .bgEl {

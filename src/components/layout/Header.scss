@@ -1,27 +1,5 @@
-// .header-cont {
-//   width: 100vw;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   position: fixed;
-//   z-index: 999;
-//   padding: 0 5%;
-//   box-sizing: border-box;
-//   transition: transform 0.3s ease;
-
-//   .logo {
-//     width: 200px;
-//     margin-top: 20px;
-//   }
-
-//   img {
-//     cursor: pointer;
-//   }
-// }
-
-// .header-cont.scrolled {
-//   transform: translateY(-100%);
-// }
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../../styles/media-queries.scss";
 
 .header-cont {
   display: flex;
@@ -30,7 +8,7 @@
   // padding: 0 20px;
 
   position: fixed;
-    width: 93%;
+  width: 93%;
 
   .logo {
     width: 200px;
@@ -40,10 +18,29 @@
     width: 77.017px;
     height: 47px;
     cursor: pointer;
-    transition: all .3s;
+    transition: all 0.3s;
   }
 
   .menu:hover {
     transform: scale(0.9);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .header-cont {
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    padding: 0 20px;
+
+    .logo {
+      width: 100px;
+    }
+
+    .menu {
+      width: 40px;
+      height: 30px;
+    }
   }
 }

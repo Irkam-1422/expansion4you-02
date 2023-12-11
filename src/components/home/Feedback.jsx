@@ -23,7 +23,8 @@ const feedbacks = [
     I worked with Anna and she always gives 100% to achieve the best results for
     her clients. Because of her extensive experience, analytical skills,
     creativity and passion she delivers a successful online marketing strategy
-    every time. <br /><br />
+    every time. <br />
+    <br />
     Bas Uding
   </div>,
 ];
@@ -69,6 +70,17 @@ export const Feedback = () => {
   return (
     <div className="feedback-cont" ref={cont}>
       <div className="content">
+        <div className="arrows-mobile">
+          <img
+            src={require("../../assets/home/purple-arrow-left.png")}
+            onClick={handleNextClick}
+          />
+          <img
+            src={require("../../assets/home/purple-arrow-left.png")}
+            onClick={handleNextClick}
+            className="left"
+          />
+        </div>
         <div className="quote q1">“</div>
         <div className="text-wrap">
           <div
@@ -77,9 +89,9 @@ export const Feedback = () => {
               count === 0
                 ? { transform: "none" }
                 : count === 1
-                ? { transform: "translateX(-650px)" }
+                ? { transform: window.innerWidth > 768 ? "translateX(-650px)" : "translateX(-280px)" }
                 : count === 2
-                ? { transform: "translateX(-1300px)" }
+                ? { transform: window.innerWidth > 768 ? "translateX(-1300px)" : "translateX(-560px)" }
                 : {}
             }
           >
@@ -88,22 +100,39 @@ export const Feedback = () => {
             })}
           </div>
         </div>
+        <div className="quote q2 d-md-none d-block">“</div>
       </div>
-      <div className="vertical"></div>
+      <div className="vertical d-none d-md-block"></div>
       <div className="bottom">
-        <h1>
-        What our <br /> clients say
-        </h1>
-        <div className="arrows">
+        <div className="d-flex d-md-none">
+          <h1>
+            What our <br /> clients say
+          </h1>
+          <div className="arrows-mobile am2">
             <img
-              src={require("../../assets/home/purple-arrow-left.png")}
+              src={require("../../assets/home/purple-arrow-right.png")}
               onClick={handlePrevClick}
+              className="right"
             />
             <img
               src={require("../../assets/home/purple-arrow-right.png")}
-              onClick={handleNextClick}
+              onClick={handlePrevClick}
             />
           </div>
+        </div>
+        <h1 className="d-none d-md-block">
+          What our <br /> clients say
+        </h1>
+        <div className="arrows d-none d-md-flex">
+          <img
+            src={require("../../assets/home/purple-arrow-left.png")}
+            onClick={handlePrevClick}
+          />
+          <img
+            src={require("../../assets/home/purple-arrow-right.png")}
+            onClick={handleNextClick}
+          />
+        </div>
       </div>
     </div>
   );

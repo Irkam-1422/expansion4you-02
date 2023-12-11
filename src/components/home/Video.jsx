@@ -52,22 +52,29 @@ export const Video = () => {
 
   return (
     <div className="video-outer" ref={videoCont}>
-      <h1>
+      <h1 className="d-none d-md-block">
         Let Expansion 4 YOU <br /> Make It Happen!
       </h1>
       <hr />
       <div className="video-inner" ref={videoRef}>
         <video
-          src={video}
+          src={require(`../../assets/home/${
+            window.innerWidth > 768 ? 'video2' : 
+            'videoMobile'
+          }.mp4`)}
           autoPlay={true}
-          muted={true}
+          muted={true} 
           loop={true}
           type="video/mp4"
         ></video>
         <div className="text">
-          Expand Your <span style={{ color: color }}>{word}</span>
+          Expand Your <span style={{ color: color, lineBreak: 'anywhere' }}>{word}</span>
         </div>
       </div>
+      <hr className="d-md-none d-block"/>
+      <h1 className="d-md-none d-block">
+        Let Expansion 4 YOU <br /> Make It Happen!
+      </h1>
       <p ref={p}>
         We believe that every Brand has its unique story, and we are here to
         help you tell yours. With our innovative digital marketing strategies,

@@ -84,7 +84,6 @@
 //     }
 //   }
 // }
-
 // @keyframes moveLogos {
 //   0% {
 //     transform: translateX(-50%);
@@ -96,6 +95,8 @@
 //     transform: translateX(-50%);
 //   }
 // }
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../../styles/media-queries.scss";
 
 .feedback-cont {
   display: flex;
@@ -170,6 +171,80 @@
 
       img:hover {
         transform: scale(0.9);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .bottom {
+      padding-top: 25px;
+
+      h1 {
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.35px;
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .arrows-mobile {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+
+      .left {
+        position: relative;
+        left: -25px;
+      }
+
+      .right {
+        position: relative;
+        left: 25px;
+      }
+    }
+
+    .am2 {
+      padding-top: 15px;
+      position: static;
+    }
+
+    .content {
+      position: relative;
+      padding-bottom: 100px;
+
+      .quote {
+        font-size: 70px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 0;
+      }
+
+      .q2 {
+        transform: scale(-1, -1);
+        align-self: end;
+        margin-left: 15px;
+      }
+
+      .text-wrap {
+        width: 250px;
+
+        .text-wrap-inner {
+          .text {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            width: 100%;
+            text-align: end;
+            margin-top: 0;
+          }
+        }
       }
     }
   }

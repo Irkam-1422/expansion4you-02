@@ -90,6 +90,8 @@
 //     }
 //   }
 // }
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../../styles/media-queries.scss";
 
 .services-cont {
   display: flex;
@@ -148,6 +150,42 @@
     line-height: normal;
     text-align: initial;
     color: #9c27b0;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column-reverse;
+    padding: 10px 0;
+    align-items: flex-start;
+    gap: 30px;
+
+    ul {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      gap: 18px;
+    }
+
+    .sb-cont {
+      align-self: end;
+
+      h1 {
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.35px;
+        width: 100%;
+        margin-bottom: 0;
+      }
+
+      a {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
   }
 }
 

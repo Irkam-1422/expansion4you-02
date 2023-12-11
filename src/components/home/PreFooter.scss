@@ -39,6 +39,8 @@
 //     }
 //   }
 // }
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../../styles/media-queries.scss";
 
 .prefoot-cont {
   background: linear-gradient(
@@ -76,6 +78,33 @@
 
     a {
       color: #9c27b0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 16px 12px;
+
+    h1 {
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.35px;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+
+    .content {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      width: 86%;
+      text-align: end;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
     }
   }
 }

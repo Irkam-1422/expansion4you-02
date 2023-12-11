@@ -22,7 +22,7 @@ export const Contact = () => {
   return (
     <div className="contact-cont" ref={contactCont}>
       <div className="contact-top" ref={contTop}>
-        <div className="">
+        <div className="ct-inner">
           <p>
             +31 638 47 14 11 <br />
             info@expansion4you.nl

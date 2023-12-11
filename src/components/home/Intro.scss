@@ -132,6 +132,8 @@
 //     }
 //   }
 // }
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../../styles/media-queries.scss";
 
 .intro-cont {
   hr {
@@ -204,6 +206,71 @@
 
     .last {
       width: 29%;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .mission {
+      transition: all 0.7s ease 0s;
+      opacity: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      align-items: flex-end;
+      gap: 60px;
+
+      h1 {
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.35px;
+        width: 100%;
+      }
+
+      a {
+        color: #a533ff;
+        font-family: Quicksand;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .text {
+        p {
+          color: #000;
+          text-align: right;
+          font-family: Quicksand;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          width: 180px;
+        }
+      }
+    }
+
+    .content {
+      transition: all 0.7s ease 0s;
+      opacity: 1;
+      padding: 20px;
+      align-items: flex-start;
+
+      div {
+        color: #000;
+        text-align: initial;
+        font-family: Quicksand;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 60%;
+      }
+
+      .last {
+        width: 60%;
+      }
     }
   }
 }

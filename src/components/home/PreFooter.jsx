@@ -18,7 +18,7 @@ export const PreFooter = () => {
       <hr />
       <div className="prefoot-cont" ref={cont}>
         <h1>
-          Expansion <br />
+          Expansion <br className="d-none d-md-block"/>
           4YOU
         </h1>
         <div className="content">

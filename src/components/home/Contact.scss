@@ -61,6 +61,8 @@
 //     }
 //   }
 // }
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../../styles/media-queries.scss";
 
 .contact-cont {
   .contact-top {
@@ -113,6 +115,58 @@
 
     a {
       color: #9c27b0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .contact-top {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0;
+      padding-bottom: 20px;
+      align-items: flex-start;
+
+      .ct-inner {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: initial;
+
+        .socials-cont {
+          gap: 10px;
+
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+
+      h1 {
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.35px;
+        width: 100%;
+        margin-top: 0.5rem;
+        text-align: end;
+        margin-bottom: 80px;
+      }
+    }
+
+    .contact-bottom {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      width: 80%;
+      text-align: initial;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 25px 0;
     }
   }
 }

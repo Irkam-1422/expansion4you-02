@@ -4,6 +4,7 @@ import swork from "../../assets/home/swork.png";
 import { observer_op } from "../../observers.js";
 
 import "./SelectedWork.scss";
+import { Accordion } from "react-bootstrap";
 
 const articles = [
   { title: "Selected Work", img: "article1.png" },
@@ -39,7 +40,7 @@ export const SelectedWork = () => {
     <div className="swork-cont" ref={sworkCont}>
       <div className="sw-top" ref={cont}>
         <h1>Selected Work</h1>
-        <div className="vertical"></div>
+        <div className="vertical d-none d-md-block"></div>
         <p>
           We empower local and global businesses to establish an impactful and
           influential online presence. Through strategic digital solutions, we
@@ -49,8 +50,8 @@ export const SelectedWork = () => {
           drive sustainable growth in the ever-evolving online sphere.
         </p>
       </div>
-      <hr />
-      <div className="sw-bottom">
+      <hr className="d-none d-md-block"/>
+      <div className="sw-bottom d-none d-md-flex">
         {articles.map((a, i) => {
           return (
             <div className="inner" ref={i === 0 ? a1 : i === 1 ? a2 : a3}>
@@ -62,7 +63,22 @@ export const SelectedWork = () => {
           );
         })}
       </div>
-      <hr />
+      <Accordion defaultActiveKey="0" flush>
+        {articles.map((a, i) => {
+          return (
+            <Accordion.Item eventKey={i}>
+              <Accordion.Header className={i===2 ? "bottom" : ""}>Some Article</Accordion.Header>
+              <Accordion.Body>
+                <div className="" style={{ width: "100%" }}>
+                  <img src={require(`../../assets/home/${a.img}`)} alt="" />
+                </div>
+                <h3>{a.title}</h3>
+              </Accordion.Body>
+            </Accordion.Item>
+          );
+        })}
+      </Accordion>
+      <hr className="d-none d-md-block"/>
     </div>
   );
 };
