@@ -1,0 +1,33 @@
+.work-steps-cont {
+  display: flex;
+  border-top: 2px solid #000;
+
+  transform: translateX(-50%);
+  opacity: 0;
+
+  .step-cont {
+    flex: 40%;
+    padding: 25px;
+
+    h2 {
+      text-align: end;
+    }
+  }
+  .img-wrap {
+    background: #ccc;
+    flex: 60%;
+    border-left: 2px solid;
+  }
+}
+
+.reverse {
+    flex-direction: row-reverse;
+
+    transform: translateX(50%);
+    opacity: 0;
+
+    .img-wrap {
+        border-left: none;
+        border-right: 2px solid;
+      }
+}

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import video from "../../assets/home/video2.mp4";
 import { observer_op } from "../../observers.js";
 import "./Video.scss";
 
@@ -59,19 +58,19 @@ export const Video = () => {
       <div className="video-inner" ref={videoRef}>
         <video
           src={require(`../../assets/home/${
-            window.innerWidth > 768 ? 'video2' : 
-            'videoMobile'
+            window.innerWidth > 768 ? "video2" : "videoMobile"
           }.mp4`)}
           autoPlay={true}
-          muted={true} 
+          muted={true}
           loop={true}
           type="video/mp4"
         ></video>
         <div className="text">
-          Expand Your <span style={{ color: color, lineBreak: 'anywhere' }}>{word}</span>
+          Expand Your{" "}
+          <span style={{ color: color, lineBreak: "anywhere" }}>{word}</span>
         </div>
       </div>
-      <hr className="d-md-none d-block"/>
+      <hr className="d-md-none d-block" />
       <h1 className="d-md-none d-block">
         Let Expansion 4 YOU <br /> Make It Happen!
       </h1>
@@ -81,7 +80,7 @@ export const Video = () => {
         we transform ideas into impactful narratives, driving your brand’s
         success.
       </p>
-      <hr />
+      <hr style={{ marginBottom: "0" }} />
     </div>
   );
 };

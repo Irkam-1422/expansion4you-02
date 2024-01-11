@@ -1,0 +1,33 @@
+.work-cont {
+  h1 {
+    color: #000;
+    font-family: Philosopher;
+    font-size: 70px;
+    font-weight: 400;
+    margin: 30px 0;
+    text-align: initial;
+  }
+
+  h2 {
+    font-size: 50px;
+    font-family: Philosopher;
+  }
+
+  hr.pink {
+    border: 1px solid #9c27b0;
+  }
+  
+  p {
+    color: #000;
+    font-family: Quicksand;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: initial;
+  }
+
+  .pink {
+    color: #9c27b0;
+  }
+}

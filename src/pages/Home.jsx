@@ -1,5 +1,5 @@
 import React from "react";
-import { Contact } from "../components/home/Contact";
+import { Contact } from "../components/layout/Contact";
 import { Feedback } from "../components/home/Feedback";
 import { Intro } from "../components/home/Intro";
 import { PreFooter } from "../components/home/PreFooter";

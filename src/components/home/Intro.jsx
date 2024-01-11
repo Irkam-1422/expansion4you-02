@@ -54,7 +54,7 @@ export const Intro = () => {
           both new and existing audiences.
         </div>
       </div>
-      <hr />
+      <hr style={{ margin: "0" }} />
     </div>
   );
 };

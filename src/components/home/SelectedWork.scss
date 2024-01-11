@@ -114,9 +114,10 @@
     }
 
     .vertical {
-      width: 2px;
+      width: 5px;
       background: #000;
       height: 200px;
+      margin: -30px 0;
     }
 
     p {
@@ -166,6 +167,8 @@
       h3 {
         text-align: end;
         font-size: 25px;
+        font-weight: 700;
+        margin-top: 20px;
       }
     }
 

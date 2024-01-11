@@ -43,11 +43,11 @@
 @import "../../styles/media-queries.scss";
 
 .prefoot-cont {
-  background: linear-gradient(
-    240deg,
-    rgba(255, 198, 50, 0.3) 31.56%,
-    rgba(156, 39, 176, 0.5) 84.15%
-  );
+  // background: linear-gradient(
+  //   240deg,
+  //   rgba(255, 198, 50, 0.3) 31.56%,
+  //   rgba(156, 39, 176, 0.5) 84.15%
+  // );
   padding: 38px 51px;
   display: flex;
   flex-direction: column;
@@ -55,6 +55,7 @@
 
   h1 {
     color: var(--almost-black, #1a1616);
+    color: #9c27b0;
     font-family: Philosopher;
     font-size: 70px;
     font-style: normal;
@@ -78,6 +79,10 @@
 
     a {
       color: #9c27b0;
+    }
+
+    p {
+      margin: 1rem 0;
     }
   }
 

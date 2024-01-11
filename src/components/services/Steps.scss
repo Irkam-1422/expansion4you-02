@@ -1,0 +1,38 @@
+.service-steps-cont {
+  hr {
+    margin-top: 0;
+  }
+
+  .inner-cont {
+    display: flex;
+    gap: 15px;
+
+    .step {
+      padding: 15px 35px;
+
+      h2 {
+        text-align: end;
+        margin-bottom: 30px;
+        margin-top: 10px;
+      }
+
+      p {
+        color: #000;
+        font-family: Quicksand;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: initial;
+        width: 80%;
+        margin-bottom: 30px;
+      }
+    }
+
+    .vertical {
+      background: #000;
+      width: 12px;
+      margin-top: -16px;
+    }
+  }
+}

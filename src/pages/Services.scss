@@ -1,0 +1,60 @@
+.serv-cont {
+  margin-top: 150px;
+  margin-top: 100px;
+
+  h1 {
+    color: #000;
+    font-family: Philosopher;
+    font-size: 70px;
+    font-weight: 400;
+    margin: 30px 0;
+    text-align: initial;
+  }
+
+  h2 {
+    color: #000;
+    font-family: Philosopher;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: initial;
+    margin: 0;
+  }
+
+  .title {
+    // transition: all .3s;
+    padding-top: 20px;
+    cursor: pointer;
+
+
+    hr {
+        margin: 0;
+    }
+
+    h2 {
+        padding-left: 15px;
+        margin-bottom: 20px;
+    }
+
+    .title-h2 {
+        transition: all 0.5s;
+        transform: translateX(-50%);
+        color: #9c27b0;
+        opacity: 0;
+    }
+
+    .show {
+        transform: none;
+        opacity: 1;
+    }
+  }
+
+  .title:hover {
+    // color: #9c27b0;
+    background-color: #9b27b02f;
+
+    .title-h2 {
+        color: #9c27b0;
+    }
+  }
+}

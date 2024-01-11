@@ -14,7 +14,10 @@
   justify-content: space-between;
   padding: 50px;
   box-sizing: border-box;
-  display: none;
+  // display: none;
+
+  transform: translateX(100%);
+  transition: all .5s;
 
   // position: fixed;
   //   width: 94%;
@@ -68,8 +71,16 @@
       transform: translateX(100%);
       opacity: 0;
 
-      div {
+      a {
         font-family: Philosopher;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s;
+      }
+
+      a:hover {
+        color: #9c27b0;
+        opacity: 1;
       }
     }
 

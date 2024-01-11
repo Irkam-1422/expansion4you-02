@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import "./Menu.scss";
 
 const items = ["About", "Services", "Our Work", "What’s New", "Contact Us"];
+const links = ['/', '/services', '/work', '/news', '/contact'];
 
 export const Menu = ({ menu, setMenu }) => {
   const inputs = useRef([])
@@ -26,8 +28,10 @@ export const Menu = ({ menu, setMenu }) => {
   return (
     <div
       className="menu-cont"
-      style={menu ? { display: "flex" } : { display: "none" }}
+      style={menu ? { transform: 'none' } : { transform: 'translateX(100%)' }}
     >
+      {/* transition: all .5s;
+    transform: translateX(100%); */}
       <div className="menu-header">
         <img
           src={require("../../assets/home/logoBlack.png")}
@@ -43,10 +47,12 @@ export const Menu = ({ menu, setMenu }) => {
         {items.map((item,i) => {
           return (
             <li ref={el => inputs.current[i] = el} >
-              <div
-                className="">
+              <Link to={links[i]}
+                className=""
+                onClick={() => setMenu(false)}
+                >
                 {item}
-              </div>
+              </Link>
               <div className="circle"></div>
             </li>
           );
